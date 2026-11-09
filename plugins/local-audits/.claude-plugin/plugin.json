@@ -1,0 +1,10 @@
+{
+  "name": "agentproof-local-audits",
+  "version": "1.0.0",
+  "description": "Security audits of Next.js, Postgres and Supabase code that your coding agent runs locally. Each finding gets a test, a fix and a findings file.",
+  "author": { "name": "AgentProof", "url": "https://isagentproof.com" },
+  "homepage": "https://isagentproof.com",
+  "repository": "https://github.com/GravyPouch/agentproof-skills",
+  "license": "MIT",
+  "keywords": ["security", "audit", "nextjs", "postgres", "supabase", "rls"]
+}

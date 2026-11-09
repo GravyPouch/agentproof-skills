@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "agentproof": {
+      "type": "http",
+      "url": "https://isagentproof.com/mcp"
+    }
+  }
+}

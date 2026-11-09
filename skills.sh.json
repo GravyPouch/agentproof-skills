@@ -1,0 +1,16 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "groupings": [
+    {
+      "title": "Remote audits",
+      "description": "AgentProof's agents test your live website through the AgentProof MCP server. Requires an AgentProof account.",
+      "skills": ["agentproof", "agentproof-production-audit"]
+    },
+    {
+      "title": "Local audits",
+      "description": "Your coding agent audits your code and a local or staging environment. No account needed.",
+      "skills": ["nextjs-security-audit", "postgres-security-audit", "supabase-security-audit"]
+    }
+  ],
+  "paths": ["./plugins/remote-audits/skills", "./plugins/local-audits/skills"]
+}
