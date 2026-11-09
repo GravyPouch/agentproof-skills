@@ -48,7 +48,7 @@ Run status values seen while a run is not done: `queued`, `provisioning`, `runni
 | Tool | Arguments | What it does |
 | --- | --- | --- |
 | `list_notification_destinations` | `workspace_id` | Lists the workspace's notification destinations (webhook, Slack or Discord), the events each receives, and its last delivery. Read-only |
-| `send_test_notification` | See the tool's input schema | Sends a test event to one destination |
+| `send_test_notification` | `destination_id` (from `list_notification_destinations`), `workspace_id` | Sends a test event to one destination and returns whether it was delivered. Owners and admins only |
 
 Destinations are created, changed and deleted on the website, in Settings. No tool adds a destination.
 
