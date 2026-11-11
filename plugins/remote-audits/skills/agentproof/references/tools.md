@@ -37,8 +37,8 @@ Ownership transfer and deletion are not tools. They happen on the website.
 | `list_agents` | none | The Attack Agent and the Defense Agent, with ID, team, whether each is running and its current run | 0 |
 | `start_audit` | none | Starts an Attack Agent test of the website in Settings with AgentProof's built-in safety rules: no real orders, no data changes, no heavy traffic. If a confirmed finding matches a connected GitHub repository, a Defense Agent prepares a fix pull request and a retest follows | 1, plus 1 for the fix and 1 for the retest |
 | `start_run` | `team` (`attack` or `defense`) or `agent_id` (from `list_agents`), `prompt` (required) | Starts a task on one agent with the given instructions, on the website in Settings | 1 |
-| `get_run` | `run_id` (required) | Status, agent, website, start and end times, report state and the run page | 0 |
-| `list_reports` | `agent_id` (optional), `limit` (1 to 50, default 20), `cursor` (`nextCursor` of the previous page) | Finished runs that have reports, newest first | 0 |
+| `get_run` | `run_id` (required) | Status, agent, website, start and end times, report state, the run page, and usage: tokens, steps, actions, time and price when prices are set | 0 |
+| `list_reports` | `agent_id` (optional), `limit` (1 to 50, default 20), `cursor` (`nextCursor` of the previous page) | Finished runs that have reports, newest first, each with its usage | 0 |
 | `list_findings` | `run_id` (optional) | Findings with title, severity, status and address, plus the fix pull request state. Without `run_id`, the workspace's newest findings. Evidence stays on the run page | 0 |
 | `list_planned_runs` | `limit` (1 to 100, default 50) | Planned runs in time order with team, copies, website, start time and a Calendar link; runs left to plan this month; whether Auto schedule every month is on | 0 |
 | `set_monthly_auto_schedule` | `enabled` (required boolean) | Turns Auto schedule every month on or off. When on, AgentProof plans the rest of each credit month on the website in Settings | 1 per planned run when it starts |
