@@ -87,4 +87,4 @@ Ask the assistant to call `get_account`. It returns the account email and worksp
 - **No browser window opened:** start the sign-in from the client's MCP or connector settings.
 - **Authentication expired:** disconnect and connect again from the client. The user can also revoke a connection on the AgentProof website, in Settings > Security, and connect again.
 - **Tools are missing:** the client may cache the tool list. Reconnect the server or restart the client.
-- **Wrong workspace:** call `get_account` and pass the right `workspace_id`.
+- **Wrong website:** runs test only the website in AgentProof Settings > Website. Change it there.

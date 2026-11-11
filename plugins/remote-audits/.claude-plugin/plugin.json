@@ -1,6 +1,6 @@
 {
   "name": "agentproof-remote-audits",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Connects the AgentProof MCP server and runs production audits of live websites with AgentProof's agents. Requires an AgentProof account.",
   "author": { "name": "AgentProof", "url": "https://isagentproof.com" },
   "homepage": "https://isagentproof.com",

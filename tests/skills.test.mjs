@@ -26,7 +26,7 @@ const kinds = {
 const MCP_TOOLS = [
   "get_account", "create_workspace", "rename_workspace", "list_members", "invite_member", "revoke_invitation",
   "change_member_role", "remove_member", "leave_workspace", "get_billing", "list_agents", "start_run", "get_run",
-  "list_reports", "list_findings", "start_audit", "list_notification_destinations", "send_test_notification",
+  "list_reports", "list_findings", "start_audit", "list_notification_destinations", "send_test_notification", "list_planned_runs", "set_monthly_auto_schedule",
 ];
 // Backticked names that look like tool calls. Anything matching must be a real tool.
 const TOOL_LIKE = /^(get|list|start|create|rename|invite|revoke|change|remove|leave|send|delete|update|open|cancel|stop|set|add)_[a-z_]+$/;
@@ -292,7 +292,7 @@ test("each plugin.json has the required metadata and links the website", () => {
   for (const k of Object.values(kinds)) {
     const p = readJSON(`${k.plugin}/.claude-plugin/plugin.json`);
     assert.equal(p.name, k.name);
-    assert.equal(p.version, "1.0.0");
+    assert.match(p.version, /^\d+\.\d+\.\d+$/);
     assert.ok(p.description);
     assert.equal(p.author.name, "AgentProof");
     assert.equal(p.homepage, SITE);
